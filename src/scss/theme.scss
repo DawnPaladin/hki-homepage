@@ -1,0 +1,49 @@
+@mixin background-blur($amount, $opacity, $imgpath, $offset) {
+	// Gives the element a blurred background image.
+	// $amount: how much blur to apply (e.g. 15px)
+	// $opacity: of blue overlay (e.g. .75)
+	// $imgpath: path to background image (e.g. 'img/backgrounds/kitchen.jpg')
+	// $offset: vertical position of background image (e.g. 50%)
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: rgba(36, 57, 89, $opacity);
+		background-size: cover;
+		z-index: 1;
+	}
+	&:after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		filter: blur($amount);
+		background: url($imgpath);
+		background-position: 50% $offset;
+		background-size: cover;
+		z-index: 0;
+	}
+	& > * {
+		z-index: 2;
+		position: relative;
+	}
+}
+
+$header-bg-img: 'img/backgrounds/kitchen.jpg';
+$header-bg-img-offset: 70%;
+
+.blue1 {
+	@include background-blur(5px, .75, $header-bg-img, $header-bg-img-offset - 51%);
+	height: 100px;
+}
+.blue2 {
+	@include background-blur(5px, .6, $header-bg-img, $header-bg-img-offset - 43%);
+	height: 50px;
+}
