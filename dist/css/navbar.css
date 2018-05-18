@@ -1,0 +1,26 @@
+.navbar {
+  height: 300px;
+  /* first level */
+  /* second level */ }
+  .navbar > a {
+    display: none; }
+  .navbar li {
+    position: relative; }
+  .navbar > ul {
+    height: 3.75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .navbar ul {
+    list-style: none;
+    padding-left: 0; }
+  .navbar > ul > li {
+    height: 100%; }
+  .navbar li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column; }
+  .navbar li:hover > ul {
+    display: flex; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zY3NzL25hdmJhci5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0MsY0FBYTtFQWtCYixpQkFBaUI7RUFLakIsa0JBQWtCLEVBVWxCO0VBbENEO0lBR0UsY0FBYSxFQUNiO0VBSkY7SUFNRSxtQkFBa0IsRUFDbEI7RUFQRjtJQVNFLGVBQWM7SUFDZCxjQUFhO0lBQ2Isb0JBQW1CO0lBQ25CLCtCQUE4QixFQUM5QjtFQWJGO0lBZUUsaUJBQWdCO0lBQ2hCLGdCQUFlLEVBQ2Y7RUFqQkY7SUFxQkUsYUFBWSxFQUNaO0VBdEJGO0lBMEJFLGNBQWE7SUFDYixtQkFBa0I7SUFDbEIsVUFBUztJQUNULHVCQUFzQixFQUN0QjtFQTlCRjtJQWdDRSxjQUFhLEVBQ2IiLCJmaWxlIjoibmF2YmFyLmNzcyJ9 */
