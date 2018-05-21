@@ -14,9 +14,11 @@
 	a:link, a:visited, a:hover, a:active {
 		color: white;
 	}
+	a[href="#"] { text-decoration: none; } // no underline for hover-only links
 	ul {
 		list-style: none;
 		padding-left: 0;
+		margin-bottom: 0;
 		width: max-content;
 	}
 	li {
@@ -31,7 +33,7 @@
 		flex-direction: row;
 	}
 	&>ul>li {
-		height: 1.5em;
+		height: 2.25em;
 	}
 	&>ul>li:first-child {
 		padding-left: 0;
