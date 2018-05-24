@@ -8,6 +8,8 @@ canvas {
 }
 .loading {
 	background-image: url('loading.png');
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .globe-row {
@@ -46,20 +48,20 @@ canvas {
 }
 
 .bubble-target {
-  position: absolute;
-  width: 28px;
-	z-index: 3
+	position: absolute;
+	width: 28px;
+	z-index: 3;
 }
 .bubble-target .bubble {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  border-radius: 6px;
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
 	z-index: 5;
-  position: absolute;
+	position: absolute;
 	top: -15px;
 	right: 50px;
 }
@@ -70,7 +72,7 @@ canvas {
 	z-index: 6;
 }
 .bubble-target:hover .bubble {
-  visibility: visible;
+	visibility: visible;
 }
 .bubble-target .bubble::after { /* bubble "tail" */
 	content: "";
