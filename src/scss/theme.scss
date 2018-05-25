@@ -289,10 +289,13 @@ footer.container-fluid {
 	@include background-blur(5px, .5, '/hki-sitefinity-theme/dist/img/backgrounds/blueprint.png', 85%);
 	padding: 1.5em 0;
 	color: $text-color;
+	a:link, a:visited, a:hover, a:active {
+		color: $text-color;
+		text-decoration: underline;
+	}
 	.smallcaps {
 		@include heavy-emphasis;
 		color: rgba(169, 169, 169, 1);
-		display: inline;
 	}
 	.lang-select {
 		margin-left: .5em;
@@ -303,12 +306,28 @@ footer.container-fluid {
 	.link-row {
 		margin: 1em 0;
 		a {
-			padding: 5px;
 			@include light-emphasis;
+		}
+		a:not(:first-child) {
+			padding: .5em;
+		}
+		.inv-bg {
+			background: #395B7F;
+			padding: .5em;
+			display: inline-block;
+			a {
+				padding-bottom: 1.5em;
+				padding-left: .5em;
+				display: inline;
+			}
+		}
+		&.negate-margin-top {
+			margin-top: -1em;
 		}
 	}
 	.title {
 		font-weight: bold;
 		display: inline;
+		margin-right: .75em;
 	}
 }
