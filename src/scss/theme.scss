@@ -68,7 +68,7 @@ h2 {
 		margin-top: 1em;
 	}
 	.employee-login {
-		margin-right: 1em;
+		margin-top: 1em;
 		@include light-emphasis;
 	}
 	.search-box {
@@ -175,6 +175,8 @@ h2 {
 	background: url($header-bg-img);
 	background-size: cover;
 	background-position: 50% $header-bg-img-offset;
+	position: relative; // prevent this from overlapping navbar
+	z-index: 1; // prevent this from overlapping navbar
 	.headline {
 		margin-top: 50px;
 	}
@@ -264,6 +266,7 @@ h2 {
 .relationships {
 	background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/relationships.jpg');
 	background-position: 50% 80%;
+	font-weight: 500;
 }
 .bg-blueprint {
 	background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/blueprint.png');
@@ -277,8 +280,10 @@ h2 {
 	line-height: 51px;
 	padding: 150px;
 	.contact-us-btn {
-		background-color: #FFD520;
+		position: relative;
+		top: 1em;
 		padding: .5em 2em;
+		background-color: #FFD520;
 		border-radius: 2em;
 		color: black;
 		@include light-emphasis;
