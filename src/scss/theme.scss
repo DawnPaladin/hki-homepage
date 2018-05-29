@@ -308,21 +308,11 @@ footer.container-fluid {
 		a {
 			@include light-emphasis;
 		}
+		a:first-child {
+			padding-right: .5em;
+		}
 		a:not(:first-child) {
 			padding: .5em;
-		}
-		.inv-bg {
-			background: #395B7F;
-			padding: .5em;
-			display: inline-block;
-			a {
-				padding-bottom: 1.5em;
-				padding-left: .5em;
-				display: inline;
-			}
-		}
-		&.negate-margin-top {
-			margin-top: -1em;
 		}
 	}
 	.title {
