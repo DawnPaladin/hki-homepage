@@ -298,7 +298,7 @@ footer.container-fluid {
 		color: rgba(169, 169, 169, 1);
 	}
 	.lang-select {
-		margin-left: .5em;
+		margin: 1em 0;
 		background: #161617;
 		color: $text-color;
 		@include light-emphasis;
