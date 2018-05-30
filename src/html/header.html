@@ -7,8 +7,16 @@
 				<div class="col-md-5 offset-md-2 nav-column-right">
 					<div class="employee-login"><a href="#">Employee Login</a></div>
 					<div class="search-row">
-						<div class="search-box input-group"><input class="form-control" type="text" /><span class="input-group-btn"><button class="btn btn-secondary" type="button">Search</button></span>
-						</div>
+						<form action="http://hki.com/search">
+							<div class="search-box input-group">
+								<input class="form-control" type="text" name="searchQuery" />
+								<input type="hidden" name="indexCatalogue" value="search-index-1" />
+								<input type="hidden" name="wordsMode" value="0" />
+								<span class="input-group-btn">
+									<button class="btn btn-secondary" type="submit">Search</button>
+								</span>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
