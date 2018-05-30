@@ -1,7 +1,7 @@
 @import "partials.scss";
 
 .navbar-bg {
-	@include background-blur(5px, .9, $header-bg-img, $header-bg-img-offset - 37%);
+	@include background-blur(5px, .75, $header-bg-img, $header-bg-img-offset - 51%);
 	overflow: visible;
 }
 

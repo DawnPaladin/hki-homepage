@@ -10,7 +10,7 @@ h2 {
 // header
 
 .header {
-	@include background-blur(5px, .75, $header-bg-img, $header-bg-img-offset - 51%);
+	@include background-blur(5px, .9, $header-bg-img, $header-bg-img-offset - 58%);
 	a {
 		color: white;
 		transition: color .25s;
@@ -82,7 +82,7 @@ h2 {
 	}
 }
 .ordering {
-	@include background-blur(5px, .6, $header-bg-img, $header-bg-img-offset - 43%);
+	@include background-blur(5px, .5, $header-bg-img, $header-bg-img-offset - 47%);
 	padding: 10px 0;
 	font-family: "Palanquin", serif;
 	font-weight: bold;
