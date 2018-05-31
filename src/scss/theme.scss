@@ -179,11 +179,12 @@ h2 {
 	z-index: 1; // prevent this from overlapping navbar
 	.headline {
 		margin-top: 50px;
+		max-width: 100%;
 	}
 }
 
 .quadrants {
-	position: absolute;
+	position: relative;
 	z-index: 1;
 	padding-top: 2em;
 	color: #CCDAE4;
@@ -192,9 +193,19 @@ h2 {
 	}
 	.quadrant {
 		position: relative;
-		width: 400px;
 		margin: 1em 0;
 		padding: .5em 1em;
+	}
+}
+
+// globe
+
+@media (min-width: 1200px) {
+	div.globe-row {
+		padding-bottom: 150px;
+	}
+	.quadrant {
+		width: 400px;
 		background: rgba(0, 70, 119, 0.75);
 	}
 	.quadrant::before {
@@ -208,9 +219,29 @@ h2 {
 		background: linear-gradient(90deg, rgba(0, 70, 119, 0.75) 0%, rgba(0, 70, 119, 0.0) 100%);
 	}
 }
+@media (max-width: 1199px) {
+	div.globe-row {
+		display: none;
+	}
+	.quadrant {
+		background: rgba(0, 70, 119, 0.85);
+	}
+}
+
+@media (min-width: 550px) {
+	.headline.mobile {
+		display: none;
+	}
+}
+@media (max-width: 549px) {
+	.headline.desktop {
+		display: none;
+	}
+}
 
 .trophies {
 	background: url('/hki-sitefinity-theme/dist/img/awards.png'), linear-gradient(hsla(208, 91%, 17%, 0.9), hsla(208, 91%, 17%, 0.9)), url('/hki-sitefinity-theme/dist/img/textures/blue-rock.jpg');
+	background-position-x: center;
 	background-position-y: top, center, center;
 	background-repeat: repeat-x, no-repeat, repeat;
 }
@@ -251,7 +282,7 @@ h2 {
 
 .stripe {
 	background-size: cover;
-	padding: 100px;
+	padding: 10vw;
 }
 .customer-first {
 	background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/customer-first.jpg');
