@@ -166,6 +166,9 @@ h2 {
 		height: 1.4em;
 		display: inline-block;
 		margin-left: 15px;
+		@media (max-width: 675px) {
+			display: none;
+		}
 	}
 }
 

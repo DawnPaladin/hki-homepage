@@ -24,7 +24,6 @@
 		list-style: none;
 		padding-left: 0;
 		margin-bottom: 0;
-		width: max-content;
 	}
 	li {
 		position: relative;
@@ -39,6 +38,7 @@
 	&>ul {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 	}
 	&>ul>li {
 		height: 2.25em;
@@ -51,9 +51,11 @@
 	ul ul {
 		display: none;
 		position: absolute;
+		z-index: 1;
 		top: 100%;
 		left: 0;
 		flex-direction: column;
+		width: max-content;
 		background: rgba(36, 57, 89, .95)
 	}
 	li:hover>ul {
