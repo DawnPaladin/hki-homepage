@@ -260,6 +260,15 @@ h2 {
 	}
 	.logos {
 		margin: 2em;
+		position: relative;
+		@media (max-width: 760px) {
+			animation-name: pan;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
+			justify-content: right;
+		}
 	}
 	.partner-logo {
 		height: 85px;
@@ -280,6 +289,14 @@ h2 {
 		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 1.1em;
 		line-height: 1.75em;
+	}
+}
+@keyframes pan {
+	from {
+		left: 0px;
+	}
+	to {
+		left: calc(825px - 100vw);
 	}
 }
 
