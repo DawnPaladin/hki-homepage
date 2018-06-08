@@ -1,6 +1,4 @@
-$('.logos > img').first().clone().appendTo('.logos'); // seamless looping
 var $logos = $('.logos > img');
-
 var index = 0;
 
 var $oldLogo = $logos.eq(index);
@@ -19,11 +17,14 @@ function cycle() {
 	});
 
 	index++;
-	if (index >= $logos.length - 1) {
-		index = 0;
+	if (index < $logos.length - 1) {
+		$oldLogo = $logos.eq(index);
+		$newLogo = $logos.eq(index + 1);
+	} else if (index == $logos.length - 1) {
+		$oldLogo = $logos.eq(index);
+		$newLogo = $logos.eq(0);
+		index = -1;
 	}
-	$oldLogo = $logos.eq(index);
-	$newLogo = $logos.eq(index + 1);
 
 	$newLogo.css('left', screenWidth/2);
 }
