@@ -14,6 +14,7 @@ function cycle() {
 	$newLogo.css({
 		opacity: 1,
 		left: -$newLogo.width()/2,
+		top: (125-$newLogo.height())/2 - 20,
 	});
 
 	index++;
