@@ -27,4 +27,14 @@ function cycleForward() {
 		.addClass('faded');
 	$primary
 		.show();
+	
+	$left.css('left', calculatePosition($left, -1));
+	$center.css('left', calculatePosition($center, 0));
+	$right.css('left', calculatePosition($right, 1));
 };
+
+function calculatePosition($image, sign) {
+	var imageCenterline = $image.width()/2;
+	var placeOffset = sign * 200;
+	return placeOffset - imageCenterline;
+}
