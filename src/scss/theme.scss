@@ -366,16 +366,19 @@ h2 {
 	}
 }
 .bg-blueprint {
-	background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/blueprint.png');
-	background-position: center 13%;
-	background-size: cover;
+	background-color: #042e56;
+	background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/blueprint-top.png'), url('/hki-sitefinity-theme/dist/img/backgrounds/blueprint-bottom.png');
+	background-position: center top, center bottom;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding-top: 14vw;
+	padding-bottom: 18vw;
 }
 .contact-us {
 	font-family: "Palanquin", sans-serif;
 	font-size: 26px;
 	color: white;
 	line-height: 51px;
-	padding: 150px;
 	.contact-us-btn {
 		position: relative;
 		top: 1em;
@@ -387,13 +390,32 @@ h2 {
 		font-weight: bold;
 	}
 }
-footer.container-fluid {
-	@include background-blur(5px, .5, '/hki-sitefinity-theme/dist/img/backgrounds/blueprint.png', 79%);
-	padding: 1.5em 0;
+.sm-center {
+	@media (max-width: 991px) {
+		text-align: center;
+	}
+}
+footer {
+	background-image: url('/hki-sitefinity-theme/dist/img/textures/dark-brushed-metal.jpg');
 	color: $text-color;
+	position: relative;
+	&::before {
+		content: '';
+		width: 100%;
+		height: 7px;
+		background: linear-gradient(to right, hsla(228, 6%, 65%, .4), hsla(228, 6%, 65%, .4), hsla(227, 12%, 86%, .6), hsla(228, 6%, 65%, .4));
+		box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.3);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	a:link, a:visited, a:hover, a:active {
 		color: $text-color;
 		text-decoration: underline;
+	}
+	.col {
+		margin-top: 2em;
+		margin-bottom: 2em;
 	}
 	.smallcaps {
 		@include heavy-emphasis;
