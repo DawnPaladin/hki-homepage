@@ -9,7 +9,7 @@
     "build-task:sync": "sync-files dist W:\\inetpub\\test.hki.com\\hki-sitefinity-theme\\dist",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
-    "dev": "npm-run-all -p build-task:*"
+    "dev": "npm-run-all -s build-task:*"
   },
   "author": "James Harris",
   "license": "UNLICENSED",
