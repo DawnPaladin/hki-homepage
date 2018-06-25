@@ -259,10 +259,18 @@ h2 {
 	}
 }
 
+.trophies {
+	background: url("/hki-sitefinity-theme/dist/img/awards.png"), linear-gradient(rgba(4,46,83,0.9), rgba(4,46,83,0.9)), url("/hki-sitefinity-theme/dist/img/textures/blue-rock.jpg");
+	background-position-x: center;
+	background-position-y: top, center, center;
+	background-repeat: repeat-x, no-repeat, repeat;
+}
+
 .award-bg {
 	background: linear-gradient(to top, #0a0a0a, #383838);
 	h2 {
 		color: #fbd42e;
+		margin-bottom: 2em;
 	}
 }
 .award-winner-box {
@@ -303,6 +311,9 @@ h2 {
 	strong {
 		display: block;
 	}
+}
+.awards img {
+	margin: 50px;
 }
 .partnerships {
 	color: white;
