@@ -4,7 +4,7 @@
   "description": "SiteFinity theme for HKI.com",
   "main": "index.js",
   "scripts": {
-    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/css",
+    "build-task:scss-compile": "node-sass-chokidar src/scss/ -o dist/css",
     "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
     "build-task:sync": "sync-files dist W:\\inetpub\\test.hki.com\\hki-sitefinity-theme\\dist",
     "sass:build": "npm-run-all -p build-task:*",

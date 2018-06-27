@@ -341,8 +341,30 @@ div.trophies {
 	padding: 8vw 0;
 }
 
-.customer-obsessed {
-	background-image: url('/hki-sitefinity-theme/dist/img/textures/rock.jpg');
+@media (min-width: 768px) {
+	.customer-obsessed {
+		color: white;
+		background-color: black;
+		background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/welder.jpg');
+		background-position: right;
+		background-size: auto;
+		background-repeat: no-repeat;
+		.dark-bg {
+			background: rgba(0,0,0,.75);
+			padding: 20px;
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.customer-obsessed {
+		background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/hki-sitefinity-theme/dist/img/backgrounds/welder.jpg');
+		background-size: cover;
+		background-position: center center;
+		color: white;
+	}
 }
 
 .global-leader {
@@ -364,7 +386,6 @@ div.trophies {
 	}
 }
 .relationships {
-	font-weight: 500;
 	position: relative;
 	&::before {
 		content: "";
