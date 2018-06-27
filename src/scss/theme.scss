@@ -143,98 +143,6 @@ h2 {
 	}
 }
 
-// remove me
-.ordering {
-	@include background-blur(5px, .65, $header-bg-img, $header-bg-img-offset - 47%);
-	padding: 10px 0;
-	font-family: "Palanquin", serif;
-	font-weight: bold;
-	font-size: 22px;
-	color: #FFEEA6;
-	position: relative;
-	z-index: 1;
-	& > .row {
-		max-width: 100%;
-		padding-left: 30px;
-	}
-	.chevron {
-		position: absolute;
-		top: -10px;
-	}
-	.chevron1 {
-		left: -10%;
-	}
-	.chevron2 {
-		left: -100%;
-	}
-	&:hover {
-		.chevron {
-      	transition: left .65s;
-		}
-		.chevron1 {
-			left: 150%;
-		}
-		.chevron2 {
-			left: -10%;
-		}
-	}
-	a {
-		color: #FFDD4D;
-		display: inline-block;
-		position: relative;
-		padding-bottom: 3px;
-		&:hover {
-      	text-decoration: none;
-		}
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			left: 0;
-			bottom: 3px;
-			height: 2px;
-			width: 0;
-			transition: width 0s ease, background .5s ease;
-		}
-		&:hover:before {
-			width: 100%;
-			background: #FFDD4D;
-			transition: width .5s ease;
-		}
-		&:after {
-			content: '';
-			display: block;
-			position: absolute;
-			right: 0;
-			bottom: 3px;
-			height: 2px;
-			width: 0;
-			background: #FFDD4D;
-			transition: width .5s ease;
-		}
-		&:hover:after {
-			width: 100%;
-			background: transparent;
-			transition: all 0s ease;
-		}
-	}
-	.part1 {
-		font-family: "Palanquin Dark", sans-serif;
-		font-weight: 700;
-	}
-	.part2 {
-		font-weight: 300;
-	}
-	.ordering-icon {
-		height: 1.4em;
-		display: inline-block;
-		margin-left: 15px;
-		@media (max-width: 675px) {
-			display: none;
-		}
-	}
-}
-
 // main content
 
 .kitchen {
@@ -294,18 +202,6 @@ h2 {
 	}
 }
 
-/* remove me */
-@media (min-width: 550px) {
-	.headline.mobile {
-		display: none;
-	}
-}
-@media (max-width: 549px) {
-	.headline.desktop {
-		display: none;
-	}
-}
-
 div.trophies {
 	background: url("/hki-sitefinity-theme/dist/img/backgrounds/trophies.png"), linear-gradient(rgba(4,46,83,0.9), rgba(4,46,83,0.9)), url("/hki-sitefinity-theme/dist/img/textures/blue-rock.jpg");
 	background-position-x: center;
@@ -314,14 +210,6 @@ div.trophies {
 	background-size: auto;
 	h2 {
 		color: white;
-	}
-}
-
-.award-bg {
-	background: linear-gradient(to top, #0a0a0a, #383838);
-	h2 {
-		color: #fbd42e;
-		margin-bottom: 2em;
 	}
 }
 
@@ -380,49 +268,7 @@ div.trophies {
 	}
 }
 
-// delete me
-.award-winner-box {
-	background: #fbd42e;
-	color: black;
-	transform: skew(-8deg);
-	width: 440px;
-	margin: 1em;
-	padding: .75em 20px .5em 20px;
-	text-align: center;
-	font-size: 28px;
-	position: relative;
-	.contrast {
-		display: inline-block;
-		text-transform: uppercase;
-		font-size: 22px;
-		font-style: normal;
-		background-color: black;
-		color: #fbd42e;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.upper-edge {
-		position: absolute;
-		top: -.7em;
-		left: 25%;
-	}
-	.split:before {
-		content: '';
-		width: 320px;
-		height: 3px;
-		position: absolute;
-		left: 60px;
-		margin-top: .6em;
-		background: black;
-		z-index: -1;
-	}
-	strong {
-		display: block;
-	}
-}
-.awards img {
-	margin: 50px;
-}
+// possibly useful for putting logos in "Customer-Obsessed" section - if not, remove
 .partnerships {
 	color: white;
 	padding: 2em 0;
@@ -499,20 +345,6 @@ div.trophies {
 	background-image: url('/hki-sitefinity-theme/dist/img/textures/rock.jpg');
 }
 
-// delete me
-@media (min-width: 767px) {
-	.customer-first {
-		background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/customer-first.png'), linear-gradient(#d0e6fd, #ebf7fd);
-		background-position: right;
-		background-size: auto;
-		background-repeat: no-repeat;
-	}
-}
-@media (max-width: 766px) {
-	.customer-first {
-		background-image: linear-gradient(#d0e6fd, #ebf7fd);
-	}
-}
 .global-leader {
 	background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/global-leader.png');
 	color: white;
