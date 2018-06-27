@@ -306,11 +306,15 @@ h2 {
 	}
 }
 
-.trophies {
-	background: url("/hki-sitefinity-theme/dist/img/awards.png"), linear-gradient(rgba(4,46,83,0.9), rgba(4,46,83,0.9)), url("/hki-sitefinity-theme/dist/img/textures/blue-rock.jpg");
+div.trophies {
+	background: url("/hki-sitefinity-theme/dist/img/backgrounds/trophies.png"), linear-gradient(rgba(4,46,83,0.9), rgba(4,46,83,0.9)), url("/hki-sitefinity-theme/dist/img/textures/blue-rock.jpg");
 	background-position-x: center;
-	background-position-y: top, center, center;
-	background-repeat: repeat-x, no-repeat, repeat;
+	background-position-y: center;
+	background-repeat: no-repeat, repeat, repeat;
+	background-size: auto;
+	h2 {
+		color: white;
+	}
 }
 
 .award-bg {
@@ -320,6 +324,63 @@ h2 {
 		margin-bottom: 2em;
 	}
 }
+
+.award-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	max-width: 400px;
+	margin: auto;
+	color: white;
+	&.left {
+		text-align: left;		
+		img {
+			order: 0;
+		}
+		@media (min-width: 1200px) {
+			margin-right: 50px;
+		}
+	}
+	&.right {
+		@media (min-width: 741px) {
+			text-align: right;		
+			img {
+				order: 1
+			}
+		}
+		@media (min-width: 1200px) {
+			margin-left: 50px;
+		}
+	}
+	&.primary {
+		@media (min-width: 450px) {
+			img {
+				height: 181px;
+			}
+			.name {
+				font-size: 36px;
+				text-shadow: 0 0 3px;
+			}
+		}
+	}
+	img {
+		height: 140px;
+		margin: 20px;
+	}
+	.years {
+		font-family: "Roboto Condensed", sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		margin-bottom: 2px;
+	}
+	.name {
+		font-family: "Roboto", sans-serif;
+		font-size: 26px;
+		font-weight: 500;
+	}
+}
+
+// delete me
 .award-winner-box {
 	background: #fbd42e;
 	color: black;
@@ -433,6 +494,12 @@ h2 {
 	background-size: cover;
 	padding: 8vw 0;
 }
+
+.customer-obsessed {
+	background-image: url('/hki-sitefinity-theme/dist/img/textures/rock.jpg');
+}
+
+// delete me
 @media (min-width: 767px) {
 	.customer-first {
 		background-image: url('/hki-sitefinity-theme/dist/img/backgrounds/customer-first.png'), linear-gradient(#d0e6fd, #ebf7fd);
